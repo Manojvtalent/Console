@@ -1,0 +1,98 @@
+<div>
+  <h1 style="font-size: 40px; color: rgb(71, 17, 208);">{{title1 | uppercase }}</h1>
+</div>
+
+<div>
+  <h1 style="font-size: 40px;;color: rgb(222, 182, 24);">{{title1 | lowercase }}</h1>
+</div>
+
+<div>
+  <h1 style="font-size: 40px;; color: rgb(169, 16, 87);">{{title1 | titlecase }}</h1>
+</div>
+<div>
+  <h1>
+  {{pi | number}}
+</h1>
+</div>
+<div>
+  <h1>   
+      {{pi | number:'4.1-5'}}
+ </h1>
+</div>
+<div>
+  <h1>   
+      {{pi | number:'4.1-5':'fr'}}
+ </h1>
+</div>
+<div>
+  <h1>   
+      {{pi | number:'2.20'}}
+ </h1>
+</div>
+<div>
+  <h1>
+    <p>A: {{a | currency}}</p>
+    <p>A: {{a | currency:'INR'}}</p>
+    <p>A: {{a | currency:'INR':'code'}}</p>
+     <p>B: {{b | currency:'CAD':'symbol':'4.2-2'}}</p>
+     <p>B: {{b | currency:'CAD':'symbol-narrow':'4.2-2'}}</p>
+ 
+     <p>B: {{b | currency:'CLP'}}</p>
+
+  </h1>
+</div>
+<div>
+  <p>A: {{a | percent}}</p>
+
+  <p>B: {{b | percent:'4.3-5'}}</p>
+
+ <!--// <p>B: {{b | percent:'4.3-5':'fr'}}</p> -->
+</div>
+<div style="margin-top: 20px;">
+  <h2 style="color: dodgerblue;">Date Format Pipe :</h2>
+  <div>
+    <h5>{{todayDate  | date}}</h5>
+    <h5>{{todayDate  | date : 'shortDate'}}</h5>        
+    <h5>{{todayDate  | date : 'fullDate'}}</h5>
+    <h5>{{todayDate  | date : 'mediumDate'}}</h5>
+    <h5>{{todayDate  | date : 'longDate'}}</h5>
+    <h5>{{todayDate  | date : 'shortTime'}}</h5>        
+    <h5>{{todayDate  | date : 'fullTime'}}</h5>
+    <h5>{{todayDate  | date : 'longTime'}}</h5>
+    <h5>{{todayDate  | date : 'mediumTime'}}</h5>
+  </div>
+  </div>
+
+  <div>
+    <h1>
+      Employee Details
+    </h1>
+    <table class="table table-bordered" style="border-color: #dd0d0d;">
+      <thead>
+        <tr>
+          <th>Employee Id</th>
+          <th>Employee Name</th>
+          <th>Employee Email</th>
+          <th>Employee password</th>
+          <th>Employee Gender</th>
+          <th>Employee phoneno</th>
+          <th>Employee salary</th>
+          <th>Employee address</th>
+          <th> deptno</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of ListEmpts">
+          <td>{{emp.empid}}</td>
+          <td>{{emp.ename | gernder:emp.gender |uppercase}}</td>
+          <td>{{emp.email}}</td>
+          <td>{{emp.password}}</td>
+          <td>{{emp.phoneno}}</td>
+          <td>{{emp.gender}}</td>
+          <td>{{emp.salary |currency:"INR"}}</td>
+          <td>{{emp.Address}}</td>
+          <td>{{emp.deptno}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

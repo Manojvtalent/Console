@@ -1,0 +1,240 @@
+<div>
+  <h2>
+ngIf Examples 1
+  </h2>
+</div>
+<div *ngIf="false">
+  <h3>Helloo all</h3>
+</div>
+<hr/>
+<div>
+  <h1>
+    ngIf Examples 2
+  </h1>
+  <div *ngIf="manoj">
+    <h3>
+      hii all
+    </h3>
+  </div>
+</div>
+<hr/>
+<div>
+  <h1>
+    ngIf Examples 3
+  </h1>
+  <div *ngIf="manoj1; then trueBlock else falseBlock"></div>
+  <ng-template #trueBlock>
+    <h3>
+      hii all
+    </h3>
+  </ng-template>
+  <ng-template #falseBlock>
+    <h3>
+      Bye all
+    </h3>
+  </ng-template>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  </div>
+  <hr/>
+<div>
+  <h1>
+    ngIf Examples 4
+  </h1>
+  <input type="button" value="Toggel" class="btn btn-success" (click)="btnToggelClick();">
+  <div *ngIf="manoj2; then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>
+    <h3>
+      Like..!
+    </h3>
+  </ng-template>
+  <ng-template #elseBlock>
+    <h3>
+      UnLike...!
+    </h3>
+  </ng-template>
+    
+  </div>
+  <div>
+    <h1>
+      ngIf Examples 5
+    </h1>
+    <input type="button" class="btn btn-success" value="{{ToggelText}}" (click)="btnLikeToggelClick();"/>
+    <div *ngIf="manoj3; then thenB else elseB"></div>
+    <ng-template #thenB>
+      <h3>
+        &#128078;
+      </h3>
+    </ng-template>
+    <ng-template #elseB>
+      <h3 >
+        
+      </h3>
+    </ng-template>
+      
+    </div>
+
+<!--p>Unicode:</p>
+<mat-icon md-48>
+    recommend
+</mat-icon-->
+
+<div>
+  <h1 style="color:coral;">"ngSwitch Ex 1: </h1>
+  <div [ngSwitch]="'pink'">
+    <div style="color:brown;font-weight: bold;" *ngSwitchCase=" 'pink'">Niharika-Trinadh</div>
+    
+    <div style="color:blue;font-weight: bold;" *ngSwitchCase=" 'blue'">Manoj-krishna</div>
+    <div style="color:crimson;font-weight: bold;" *ngSwitchCase=" 'crimson'">pojji-sirisha</div>
+    <div style="color:darkseagreen;font-weight: bold;" *ngSwitchCase=" 'darkseagreen'">tarun-karishma</div>
+    <div *ngswitchSDefault>Invalid Selection...!</div>
+  </div>
+</div>
+<hr/>
+<div>
+  <h1 style="color:coral;">"ngSwitch Ex 2: </h1>
+  <div [ngSwitch]="color">
+  <div style="color:brown;font-weight: bold;" *ngSwitchCase=" 'brown'">Selected Color is Brown....!</div>
+  <div style="color:blue;font-weight: bold;" *ngSwitchCase=" 'blue'">Selected Color is Blue....!</div>
+  <div style="color:crimson;font-weight: bold;" *ngSwitchCase=" 'crimson'">Selected Color is crimson....!</div>
+  <div style="color:darkseagreen;font-weight: bold;" *ngSwitchCase=" 'darkseagreen'">Selected Color is darkseagreen....!</div>
+  <div *ngSwitchDefault>Invalid Selection...!</div>
+</div>
+</div>
+<hr/>
+<div>
+  <h1 style="color:coral;">*ngSwitch Ex 3: </h1>
+  <select (change) ="ddlColorSelect($event)">
+    <option value="select">-select color-</option>
+    <option value="brown">-brown-</option>
+    <option value="blue">-blue-</option>
+    <option value="crimson">-crimson-</option>
+    <option value="darkseagreen">-darkseagreen-</option>
+  </select>
+  <div [ngSwitch]="color">
+    <div style="color:brown;font-weight: bold;" *ngSwitchCase=" 'brown'">Selected Color is Brown....!</div>
+    <div style="color:blue;font-weight: bold;" *ngSwitchCase=" 'blue'">Selected Color is Blue....!</div>
+    <div style="color:crimson;font-weight: bold;" *ngSwitchCase=" 'crimson'">Selected Color is crimson....!</div>
+    <div style="color:darkseagreen;font-weight: bold;" *ngSwitchCase=" 'darkseagreen'">Selected Color is darkseagreen....!</div>
+    <div *ngswitchSDefault>Invalid Selection...!</div>
+  </div>
+</div>
+<div>
+  <h1>ngfor ex1</h1>
+  <div>
+<ul>
+  <li *ngFor="let no of Nos">{{no}}
+
+  </li>
+</ul>
+  </div>
+</div>
+<div>
+  <h1>ngfor ex2 </h1>
+  <div>
+    <select>
+      <option >Select option</option>
+      <option *ngFor="let no of Nos" value="{{no}}">{{no}}</option>
+    </select>
+  </div>
+</div>
+<div>
+  <select >
+    <option>select Course</option>
+  <option *ngFor="let item of course" value="{{item}}">{{item}}</option>
+  </select>
+</div>
+<div>
+  <select >
+    <option>select Departent</option>
+  <option *ngFor="let dept of ListDepts" value="{{dept.detno}}">{{dept.dname}}</option>
+  </select>
+</div>
+<div>
+  <h1>
+    Employee Details
+  </h1>
+  <table class="table table-bordered" style="border-color: #dd0d0d;">
+    <thead>
+      <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Employee Email</th>
+        <th>Employee password</th>
+        <th>Employee Gender</th>
+        <th>Employee phoneno</th>
+        <th>Employee salary</th>
+        <th>Employee address</th>
+        <th> deptno</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of ListEmpts">
+        <td>{{emp.empid}}</td>
+        <td>{{emp.ename}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.password}}</td>
+        <td>{{emp.phoneno}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.Address}}</td>
+        <td>{{emp.deptno}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

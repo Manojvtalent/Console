@@ -1,0 +1,62 @@
+<div class="row" style="color: brown;margin-top: 10px;margin-bottom: 20px;text-align: center;">
+  <div class="col-sm-12" ><h1>Operations</h1></div>
+</div>
+<div class="row"style="margin-bottom: 20px;">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-2"><b>Enter a value :</b></div>
+  <div class="col-sm-3">
+      <input type="text"id="txtAval" [(ngModel)]="a" class="form-control" placeholder="please enter a value"/>
+  </div>
+  <div class="col-sm-4"><span style="color:red;" id="spanAError"></span></div>
+</div>
+<div class="row"style="margin-bottom: 20px;">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-2"><b>Enter b value :</b></div>
+  <div class="col-sm-3">
+      <input type="text"id="txtBval" [(ngModel)]="b" class="form-control" placeholder="please enter b value"/>
+  </div>
+  <div class="col-sm-4"><span style="color:red;" id="spanBError"></span></div>
+</div>
+<div class="row"style="margin-bottom: 20px;text-align: center;">
+  <div class="col-sm-12">
+      <input type="button"id="btnAdd" value="Add" (click)="Add();" class="btn btn-primary"/>
+        <input type="button"id="btnSub" value="Sub" (click)="Sub();"  class="btn btn-danger"/>
+          <input type="button"id="btnmul" value="mul" (click)="mul();" class="btn btn-warning"/>
+        <input type="button"id="btnDiv" value="div" (click)="div();" class="btn btn-info"/>
+      <input type="button"id="btnrem" value="rem" (click)="rem();" class="btn btn-success"/>
+      <input type="button"id="btnevenorodd" value="Even||odd" onclick="FindEvenorOdd();" class="btn btn-success"/>
+  </div>
+</div>
+<div class="row" style="margin-bottom: 20px;text-align: center;color: blue;font-size: 20px;font-weight: bold;">
+  <div class="col-sm-12">
+      <span id="spanres">
+        {{Displayressult}}
+      </span>
+  </div>
+</div>    
+
+
+<div>
+  <input type="button" value="click me" (click)="btn_click()" class="btn btn-success"/>
+</div>
+<div>
+  <input type="button" value="click me" (click)="btn_Db1_click()" class="btn btn-primary"/>
+</div>
+<div (click)="Div_click()" style="background-color: red;color:green;text-align: center;">
+  <h1>
+    hi manoj
+  </h1>
+</div>
+<div>
+  <select (change)="ddl_SelectChange($event)" class="form-control">
+<option value="Hr">Hr</option>
+<option value="tl">tl</option>
+<option value="sales">sales</option>
+  </select>
+</div>
+<div>
+  <input type="text" [(ngModel)]="name" class="form-control"/>
+  <h2>
+    {{name}}
+  </h2>
+</div>

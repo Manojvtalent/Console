@@ -1,0 +1,176 @@
+<script>
+  function Validations(a, b){
+  debugger;  
+  // Write a logic for Validate a and b values
+  if(a == ""){
+      alert("Please enter a value...!");
+      document.getElementById("spanRes").innerHTML = "Please enter a value...!";
+      document.getElementById("spanAError").innerHTML = "* Please enter a value...!";
+      document.getElementById("txtAVal").style.border = "1px solid red";
+      return false;
+  }else if(isNaN(a)){
+      alert("Please enter a value as digits only...!");
+      document.getElementById("spanRes").innerHTML = "Please enter a value as digits only...!";
+      document.getElementById("spanAError").innerHTML = "* Please enter a value as digits only...!";
+      document.getElementById("txtAVal").style.border = "1px solid red";
+      return false;
+  }
+  else{
+      document.getElementById("spanRes").innerHTML = "";
+      document.getElementById("spanAError").innerHTML = "";  
+      document.getElementById("txtAVal").style.border = "1px solid #ccc";                   
+  }
+
+  if(b == ""){
+      alert("Please enter b value...!");
+      document.getElementById("spanRes").innerHTML = "Please enter b value...!";
+      document.getElementById("spanBError").innerHTML = "* Please enter b value...!";
+      document.getElementById("txtBVal").style.border = "1px solid red";
+      return false;
+  }else if(isNaN(b)){
+      alert("Please enter b value as digits only...!");                    
+      document.getElementById("spanRes").innerHTML = "Please enter b value as digits only...!";
+      document.getElementById("spanBError").innerHTML = "* Please enter b value as digits only...!";
+      document.getElementById("txtBVal").style.border = "1px solid red";
+      return false;
+  }
+  else{
+      document.getElementById("spanRes").innerHTML = "";
+      document.getElementById("spanBError").innerHTML = ""; 
+      document.getElementById("txtBVal").style.border = "1px solid #ccc";                   
+  }
+
+
+  return true;
+}
+
+function btnAddClick(){
+  debugger;                
+  //alert("Add button clicked successfully...!");
+  var a = document.getElementById("txtAVal").value;
+  var b = document.getElementById("txtBVal").value;
+
+  // We need to valid the given data
+  if(Validations(a, b)){                   
+      var res = parseInt(a)+parseInt(b);            
+      alert("The Addition is : " + res);
+      document.getElementById("spanRes").innerHTML = "The Addition is : " + res;
+      console.log("The Addition is : " + res);
+  }
+}
+
+function btnSubClick(){
+  debugger;  
+  // alert("Sub button clicked successfully...!");
+  var a = document.getElementById("txtAVal").value;
+  var b = document.getElementById("txtBVal").value;
+
+  // We need to valid the given data
+  if(Validations(a, b)){ 
+      var res = parseInt(a)-parseInt(b);
+      alert("The Substraction is : " + res);
+      document.getElementById("spanRes").innerHTML = "The Substraction is : " + res;
+      console.log("The Substraction is : " + res);
+  }
+}
+
+function btnMulClick(){
+  debugger;  
+  // alert("Mul button clicked successfully...!");
+  var a = document.getElementById("txtAVal").value;
+  var b = document.getElementById("txtBVal").value;
+
+  // We need to valid the given data
+  if(Validations(a, b)){ 
+      var res = parseInt(a)*parseInt(b);
+      alert("The Multiplication is : " + res);
+      document.getElementById("spanRes").innerHTML = "The Multiplication is : " + res;
+      console.log("The Multiplication is : " + res);
+  }
+}
+
+function btnDivClick(){
+  debugger;  
+  // alert("Div button clicked successfully...!");
+  var a = document.getElementById("txtAVal").value;
+  var b = document.getElementById("txtBVal").value;
+
+  // We need to valid the given data
+  if(Validations(a, b)){ 
+      var res = parseInt(a)/parseInt(b);
+      alert("The Division is : " + res);
+      document.getElementById("spanRes").innerHTML = "The Division is : " + res;
+      console.log("The Division is : " + res);
+  }
+}
+
+function btnRemClick(){
+  debugger;  
+  // alert("Rem button clicked successfully...!");
+  var a = document.getElementById("txtAVal").value;
+  var b = document.getElementById("txtBVal").value;
+
+  // We need to valid the given data
+  if(Validations(a, b)){ 
+      var res = parseInt(a)%parseInt(b);
+      alert("The Remainder is : " + res);
+      document.getElementById("spanRes").innerHTML = "The Remainder is : " + res;
+      console.log("The Remainder is : " + res);
+  }
+}
+</script>
+
+<div class="row" class="MyDivstyle">
+  <div ciass="col-sm-12">
+  <h1 style="color: red;">
+    Operations
+  </h1>
+  </div>
+</div>
+<div class="row" style="margin-bottom: 20px;">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-2"><b>Enter A value</b></div>
+  <div class="col-sm-3">
+    <input type="text" id="txtAVal" class="form-control" placeholder="Please enter a value...!" />
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+<div class="row" style="margin-bottom: 20px;">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-2"><b>Enter B value</b></div>
+  <div class="col-sm-3">
+    <input type="text" id="txtBVal" class="form-control" placeholder="Please enter b value...!" />
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+<div class="row" style="margin-bottom: 20px;text-align: center;">
+  <div class="col-sm-12">
+      <input type="button" id="btnAdd" value="Add" onclick="btnAddClick();" class="btn btn-primary" /> | 
+      <input type="button" id="btnSub" value="Sub" onclick="btnSubClick();" class="btn btn-danger" /> | 
+      <input type="button" id="btnMul" value="Mul" onclick="btnMulClick();" class="btn btn-success" /> | 
+      <input type="button" id="btnDiv" value="Div" onclick="btnDivClick();" class="btn btn-warning" /> | 
+      <input type="button" id="btnRem" value="Rem" onclick="btnRemClick();" class="btn btn-info" />
+  </div>           
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <img src="assets/Images/2.png" alt="Img 1"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <app-sample-a></app-sample-a>
+  </div>
+  <div class="col-sm-6">
+    <app-sample-b></app-sample-b>
+  </div>
+</div>
+<div>
+  <div class="row">
+    <div class="col-sm-6">
+    </div>
+   
+  </div>
+  
+  
+</div>

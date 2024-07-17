@@ -1,0 +1,106 @@
+<body>
+    <div>
+     <table width="100%">
+         <tr> 
+             <td colspan="4"><h1 style="text-align: center; background-color: blue;color:goldenrod;"><u>EMPLOYEE REGISTRATION</u></h1></td>
+         </tr>
+    
+         <tr height="40px">
+             <td width="35%"></td>
+             <td width="15%"><b>Emloyee name</b></td>
+             <td width="25%">
+                 <input class="form-control" type="text" id="txtename" [(ngModel)]="Emp.name"  placeholder="please enter employee name..!"/>
+             </td>
+             <td width="25%"></td>
+         </tr>
+         <tr height="40px">
+             <td width="35%"></td>
+             <td width="15%"><b>gender</b></td>
+             <td width="25%">
+                 <input  type="radio" id="rdtnmale" name="gender" value="male" [(ngModel)]="Emp.gender" />male
+                 <input style="margin-left: 50px;"  type="radio" id="rdtnfemale" name="gender" [(ngModel)]="Emp.gender" value="female"/>female
+             </td>
+             <td width="25%"></td>
+         </tr>
+
+         <tr height="40px">
+             <td width="35%"></td>
+             <td width="15%"><b>E-mail id</b></td>
+             <td width="25%">
+                 <input class="form-control"  type="text" id="txtemplemailid"  [(ngModel)]="Emp.email"  placeholder="please enter employee E-mail id..!"/>
+             </td>
+             <td width="25%"></td>
+         </tr>
+
+         <tr height="40px">
+             <td width="35%"></td>
+             <td width="15%"><b>password</b></td>
+             <td width="25%">
+                 <input class="form-control"  type="password" id="txtpassword"  [(ngModel)]="Emp.password" placeholder="please enter password..!"/>
+             </td>
+             <td width="25%"></td>
+         </tr>
+   
+         <tr height="40px">
+             <td width="35%"></td>
+             <td width="15%"><b>phone number</b></td>
+             <td width="25%">
+                 <input class="form-control"  type="text" id="txtemplphone"  [(ngModel)]="Emp.phonenumber" placeholder="please enter employee phone number..!"/>
+             </td>
+             <td width="25%"></td>
+         </tr>
+       
+         <tr height="40px">                           
+             <td width="35%"></td>
+             <td width="15%"><b>salary</b></td>
+             <td width="25%">
+                 <input class="form-control"  type="text" id="txtsalary"  [(ngModel)]="Emp.salary" placeholder="employeplease enter  salary..!"/></td>
+             <td width="25%"></td>   
+         </tr>
+      <tr height="40px">
+             <td width="35%"></td>
+             <td width="15%"><b>department</b></td>
+             <td width="25%">                
+                 <select class="form-control" [(ngModel)]="Emp.deptNo"  id="ddldpet no">
+                     <option value="0"> select department</option>
+                    <option *ngFor="let dept of DeptList" value="{{dept.deptNo}}" >{{dept.dname }}</option>
+                 </select>
+             </td>
+             <td width="25%"></td>
+         </tr>
+
+     <!--    <tr height="40px">
+             <td width="35%"></td>
+             <td width="15%"><b>Department No</b></td>
+             <td width="25%">
+                 <textarea class="form-control"  id="txtaddress" [(ngModel)]="Emp.dpno" rows="1" placeholder="please enter Department..!"></textarea>
+             </td>               
+         </tr> -->
+
+         <tr height="40px">
+             <td width="35%"></td>
+             <td width="15%"><b>address</b></td>
+             <td width="25%">
+                 <textarea class="form-control"  id="txtaddress" [(ngModel)]="Emp.address" rows="5" placeholder="please enter employee address..!"></textarea>
+             </td>               
+         </tr>
+
+
+         <!-- <tr height="40px">
+            <td width="35%"></td>
+            <td width="15%"><b>Active Status</b></td>
+            <td width="25%">
+                <input  type="radio" id="rdtnmale" name="gender" value="Active" [(ngModel)]="Emp.active" />Active
+                <input style="margin-left: 50px;"  type="radio" id="rdtnfemale" name="gender" [(ngModel)]="Emp.active" value="InActive"/>InActive
+            </td>
+            <td width="25%"></td>
+        </tr> -->
+       
+     </table>
+    </div>
+<div style="text-align: center;margin-top: 45px;margin-bottom: 25px;">
+ <input class="btn btn-success" style="margin-right: 45px;" type="button" value="register" id="btnregister" (click)="btnRegister()" />&nbsp;&nbsp;&nbsp;
+    <input class="btn btn-danger" style="margin-left: 45px;" type="button" value="cancle" id="btncancle" (click)="btncancel()" />
+</div>
+
+</body>

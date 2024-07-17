@@ -1,0 +1,62 @@
+<div  style="margin-bottom: 50px;text-align: center;">
+    <h1 style="color: goldenrod;"> Employee Details </h1>
+  
+  
+  
+    <table style="border-color: goldenrod;"  class="table table-striped">
+      <thead>
+        <tr>
+          <th>EMPID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>        
+          <th>Phone</th>
+          <th>Gender</th>
+          <th>Salary</th>
+          <th>Address</th>
+          <th>Department NO</th>
+          <th> Edit/Delete</th>
+          <th>Active status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of EmpList | paginate:{
+          itemsPerPage:Tablesize,
+          currentPage:page,
+          totalItems:count
+        }; let i=index "> 
+          <td>{{emp.empId}}</td>
+          <td>{{emp.name  | uppercase}}</td>
+          <td>{{emp.email}}</td>
+          <td>{{emp.password}}</td>
+          <td>{{emp.phonenumber}}</td>
+          <td>{{emp.gender}}</td>
+          <td>{{emp.salary | currency:"INR"}}</td>
+          <td>{{emp.address}}</td>
+          <td>{{emp.deptNo}}</td>
+           <td>
+            <input style="margin-right: 3px;" type="button" value="Edit" class="btn btn-success" (click)="btnEdit(emp.empId)" />
+            <input style="margin-right: 3px;" type="button" value="Delete" class="btn btn-danger" (click)="btnEdit(emp.empId)" />
+           </td>
+           <td>{{emp.active}}</td>
+           <!-- <td>          
+            <input style="margin-right: 3px;" type="button" value="Status" class="btn btn-success" (click)="btnStatus(emp.email)" />
+           </td> -->
+        </tr>
+      </tbody>
+  </table>  
+  
+  
+  <div>
+  <pagination-controls
+  previousLable="Prev" 
+  nextLable="Next"
+  (pageChange)="ngtableChange($event)"
+  >
+  
+  </pagination-controls>
+  </div>
+  
+  
+  
+  </div>

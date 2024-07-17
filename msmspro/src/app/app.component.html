@@ -1,0 +1,50 @@
+<div  class="row">
+<div class="col-sm-12">
+  <div class="container-fluid g-0">
+  
+    <!--HEADER-->
+    
+    <app-header></app-header>
+    <!--MAIN CONTENT -->
+    <main class="black-border">
+    <!--TOOBAR TO ADD AND SEARCH EMPLOYEES-->
+    <div class="toolbar black-border">
+    
+    <div  class="row">
+      <div class="col-sm-4"><a class="nav-link scrollto active" class="btn btn-outline-success btn-lg" routerLink="home">Home</a></div>
+      <div class="col-sm-4"><a class="nav-link scrollto" class="btn btn-outline-success btn-lg" routerLink="login">Login</a></div>
+      <div class="col-sm-4"><a class="nav-link scrollto" class="btn btn-outline-success btn-lg" routerLink="register">register</a></div>
+  
+    
+  
+    
+    </div>
+    
+    <div class="search-employees">
+    
+    <input type="search" class="form-control" placeholder="Search Employees">
+    
+    </div>
+    </div>
+    <!-- AREA TO DISPLAY ALL THE EMPLOYEES -->
+    
+  <div class="row">
+  <div class="col-sm-12">
+    <router-outlet></router-outlet>
+  </div>
+  </div>
+  
+    <div class="employees">
+      <div class="row mt-5" >
+        <div class="col text-center">
+          <span class="text-secondary fs-2 fw-bold fst-italic">There are No Employee Added</span>
+        </div>
+      </div>
+    </div>
+    </main>
+  </div>
+  
+  
+</div>
+</div>
+

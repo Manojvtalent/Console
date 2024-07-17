@@ -1,0 +1,146 @@
+<div class="row">
+    <div class="col-sm-11" style="text-align: center; font-size: 50px;">
+        <h2>Enter you details</h2>
+    </div>
+    <div class="col-sm-1" >
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <h4 style="font-size:20px; margin-left: 10px;">
+            Employee Id
+        </h4>
+    </div>
+    <div class="col-sm-6">
+        <input type="search" readonly="readonly" class="form-control"   [(ngModel)]="emp.empId"/>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <h4 style="font-size:20px; margin-left: 10px;">
+            Name 
+        </h4>
+    </div>
+    <div class="col-sm-6">
+        <input type="search" class="form-control"  [(ngModel)]="emp.name" placeholder="please select the option"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <h4 style="font-size:20px;margin-left: 10px;">Active</h4>
+        
+    </div>
+<!-- <div class="col-sm-3">
+    <input type="radio" [(ngModel)]="emp.active" id="true"value="true" name="Active"/><h5>True</h5>
+</div>
+<div class="col-sm-3">
+<input type="radio" [(ngModel)]="emp.active" id="False"value="False" name="Active" /><h5>False</h5>
+
+</div> -->
+<div class="col-sm-6">
+    <select class="form-control" [(ngModel)]="emp.active" >
+       <option value="{{emp.active}}">{{emp.active}}</option>
+       <option  value="0">true</option>
+       <option value="1">false</option>
+    </select>
+       </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <h4 style="font-size:20px; margin-left: 10px;">
+            Email 
+        </h4>
+    </div>
+    <div class="col-sm-6">
+        <input type="search" class="form-control"  [(ngModel)]="emp.email" placeholder="please enter last name"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <h4 style="font-size:20px;margin-left: 10px;">phoneNumber</h4>
+        
+    </div>
+        <div class="col-sm-6">
+            <input type="text" [(ngModel)]="emp.phonenumber" class="form-control" id="txtdate" placeholder="please enter dateofBirth" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h4 style="font-size:20px;margin-left: 10px;">Gender</h4>
+            
+        </div>
+    <div class="col-sm-3">
+        <input type="radio" [(ngModel)]="emp.gender" id="male"value="male" name="Gender"/><h5>Male</h5>
+    </div>
+    <div class="col-sm-3">
+    <input type="radio" [(ngModel)]="emp.gender" id="Female"value="Female" name="Gender" /><h5>FeMale</h5>
+    
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <h4 style="font-size:20px; margin-left: 10px;">
+        Password
+        </h4>
+    </div>
+    <div class="col-sm-6">
+        <input type="search" [(ngModel)]="emp.password" class="form-control" placeholder="please enter Email"/>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h4 style="font-size:20px; margin-left: 10px;">
+         salary         
+         </h4>
+        </div>
+        <div class="col-sm-6">
+            <input type="search" [(ngModel)]="emp.salary" class="form-control" placeholder="please enter password"/>
+        </div>
+</div>
+<!-- <div class="row">
+    <div class="col-sm-6">
+        <h4 style="font-size:20px; margin-left: 10px;">
+           Phone Number
+        </h4> -->
+    <!-- </div>
+    <div class="col-sm-6">
+        <input type="search" [(ngModel)]="emp.address" class="form-control" placeholder="please enter phoneNumber"/>
+    </div> -->
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <h4 style="font-size:20px; margin-left: 10px;">
+           Address
+        </h4>
+    </div >
+    <div class="col-sm-6">
+        <input type="search" [(ngModel)]="emp.address" class="form-control" placeholder="please enter address"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <h4 style="font-size:20px; margin-left: 10px;">
+           Deptno
+        </h4>
+    </div >
+    <div class="col-sm-6">
+ <select class="form-control" [(ngModel)]="emp.deptNo" >
+    <option value="0">Dept</option>
+    <option *ngFor="let dept of DeptList" value="{{dept.deptNo}}">{{dept.dname}}</option>
+ </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4" style="text-align:right;">
+        <input class="btn btn-success" (click)="btnEditClicked()" type="update" value="update" id="btnupdate"/>
+    </div>
+    <div class="col-sm-4">
+        <input class="btn btn-success" (click)="btnDeleteClicked()" type="Delete" value="Delete" id="btndelete"/>
+    </div>
+    <div class="col-sm-4">
+        <input class="btn btn-danger" (click)="btnCancilClicked()" type="button" value="Cancel" id="btncancel"/>
+    </div>
+</div>

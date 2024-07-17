@@ -1,0 +1,50 @@
+
+<div  style="margin-bottom: 50px;">
+    <h1 style="color: goldenrod;"> Employee Details </h1>
+    <table style="border-color: goldenrod;"  class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Empid</th>
+          <th>last name</th>
+          <th>first Name</th>
+          <th>Gender</th>
+          <th>DateofBirth</th>
+          <th>emailAddress</th>
+          <th>password</th>
+          <th>phoneNumber</th>
+          <th>address</th>
+          <th>Edit/Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of EmpList | paginate:{
+          itemsPerPage:tableSize,
+          currentPage:page,
+          totalItems:count
+        }; let i=index">
+          <td>{{emp.employeeNumber}}</td>
+          <td>{{emp.firstName}}</td>
+          <td>{{emp.lastame}}</td>
+          <td>{{emp.gender}}</td>
+          <td>{{emp.dateofBirth}}</td>
+          <td>{{emp.emailAddress}}</td>
+          <td>{{emp.password}}</td> 
+          <td>{{emp.phoneNumber && onNumber(emp.phoneNumber) }}</td>
+          <td>{{emp.address}}</td>
+          <td>
+            <input type="button" value="Edit" class="btn btn-success" (click)="Edit(emp.employeeNumber)"/>
+            <input type="button" value="Delete" class="btn btn-danger" (click)="Delete(emp.employeeNumber)"/>
+          </td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+      <pagination-controls
+      previousLabel="Prev"
+      nextLabel="Next"
+      (pageChange)="onTableDataCanges($event)"
+      ></pagination-controls>
+    </div>
+
+    
+    </div>
