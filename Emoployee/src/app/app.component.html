@@ -4,9 +4,9 @@
   
   <app-header></app-header>
   <!--MAIN CONTENT -->
-  <main class="black-border">
+  <main class="black-border row">
   <!--TOOBAR TO ADD AND SEARCH EMPLOYEES-->
-  <div class="toolbar black-border">
+  <div class="toolbar black-border col-sm-6">
   
   <div class="row">
     <div class="col-sm-6"><a class="nav-link" class="btn btn-outline-success btn-lg" routerLink="home">Home</a></div>
@@ -39,4 +39,19 @@
   </div>
   </main>
 </div>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Card Title</mat-card-title>
+    <mat-card-subtitle>Card Subtitle</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="image.jpg" alt="Image">
+  <mat-card-content>
+    <p>This is the content of the card.</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button  mat-raised-button color="primary">LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
 

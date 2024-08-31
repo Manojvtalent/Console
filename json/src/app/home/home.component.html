@@ -1,0 +1,14 @@
+<div *ngIf="visibleSections.length > 0">
+<div *ngFor="let section of visibleSections; let i = index">
+    <section>
+      <h2>{{ section?.title }}</h2>
+      <p>{{ section?.content }}</p>
+    </section>
+  </div>
+</div>
+  <button (click)="previous()" [disabled]="startIndex === 0">Previous</button>
+  <button (click)="next()" [disabled]="(startIndex + PAGE_SIZE) >= (images ? images.length : 0)">Next</button>
+
+  <div *ngFor="let image of visibleImages">
+    <img src="../../assets/{{ image?.url }}" alt="Image description">
+  </div>

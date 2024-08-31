@@ -16,7 +16,7 @@ import { AgGridEvent, ColDef, ColumnApi, GridApi, GridOptions, IGetRowsParams, I
 })
 export class HomeComponent {
   EmpList: Employee[]=[];
-  emp!: Employee;
+  // emp!: Employee;
  page:number=1;
  count:number=0;
  tableSize:number=5;
@@ -26,7 +26,7 @@ export class HomeComponent {
   constructor(private empObj:EmpService,private router:Router){}
       ngOnInit():void{
         this.getList();
-        this.emp={lastame:"",firstName:"",gender:"",emailAddress:"",dateofBirth:0,phoneNumber:"",password:"",address:""};
+        // this.emp={lastame:"",firstName:"",gender:"",emailAddress:"",dateofBirth:0,phoneNumber:"",password:"",address:""};
         }
     getList():void{
       this.empObj.GetAllemployees(

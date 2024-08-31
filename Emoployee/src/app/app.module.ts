@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{MatDialogModule} from '@angular/material/dialog';
 import { HomeComponent } from './home/home.component';
+import{MatCardModule}from '@angular/material/card'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmpService } from './services/emp.service';
 import { Router, RouterModule } from '@angular/router';
@@ -15,6 +16,9 @@ import { EditComponent } from './edit/edit.component';
 import { DeleteComponent } from './delete/delete.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { NgxPaginationModule } from 'ngx-pagination';
+
+import{MatButtonModule}from '@angular/material/button'
+
 console.log('AgGridModule', AgGridModule);
 
 @NgModule({
@@ -31,12 +35,14 @@ console.log('AgGridModule', AgGridModule);
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    MatCardModule,
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
     RouterModule,
     AgGridModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatButtonModule
 
   ],
   providers: [EmpService],
